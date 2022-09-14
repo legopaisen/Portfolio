@@ -1,1 +1,3 @@
-﻿new WOW().init();
+﻿document.addEventListener("DOMContentLoaded", () => {
+    fadin('.fade', { delay: 200 })
+});
