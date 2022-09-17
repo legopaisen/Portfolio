@@ -9,21 +9,33 @@
     <link rel="stylesheet" href="~/font-awesome/css/all.css" />
     <link rel="stylesheet" href="~/css/slidein.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/spinner.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <div id="spinner" class="mesh-loader fixed-top bg-black">
+        <div class="set-one">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="set-two">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
     <div>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
             <div class="container">
-                
+
                 <a class="navbar-brand" href="@Url.Action("Index","Home")" target="_self">
-                    <img src="~/images/signature.png" height="58px" width="200px"/>
+                    <img src="~/images/signature.png" height="58px" width="200px" />
                 </a>
 
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
                         <a href="https://github.com/legopaisen" class="nav-link border border-light rounded"
-                            target="_blank">
+                           target="_blank">
                             <i class="fab fa-github mr-2"></i> GitHub
                         </a>
                     </li>
@@ -41,6 +53,15 @@
     <script src="~/js/slidein.js"></script>
     <script src="~/simple-parallax-js/simpleParallax.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        var delay = 2000;
+        setTimeout(function() {
+
+            $("#spinner").fadeOut("slow");
+        },
+            delay
+        );
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
