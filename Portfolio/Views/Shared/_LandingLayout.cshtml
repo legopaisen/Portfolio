@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jes & Gelo - Portfolio</title>
+    <link rel="stylesheet" href="~/mdb-ui-kit/mdb.min.css" />
+    <link rel="stylesheet" href="~/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/slidein.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/spinner.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/landing.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/jquery/jquery.min.js"></script>
+    <script src="~/mdb-ui-kit/mdb.min.js"></script>
+    <script src="~/font-awesome/js/all.js"></script>
+    <script src="~/js/fadin.js"></script>
+    <script src="~/js/slidein.js"></script>
+    <script src="~/simple-parallax-js/simpleParallax.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
