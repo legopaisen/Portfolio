@@ -1,19 +1,19 @@
+body, html {
+    scroll-behavior: smooth;
+}
 
 .carousel, .carousel .carousel-inner, .carousel .carousel-inner .active, .carousel .carousel-inner .carousel-item, .view, body, html {
     height: 100vh
 }
 
 .navbar {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(255,255,255,.2);
 }
 
-.page-footer, .top-nav-collapse {
-    background-color: #1C1C1C
-}
 
-@media only screen and (max-width:768px) {
-    .navbar {
-        background-color: #1C1C1C
+@media only screen and (max-width:910px) {
+    .navAround{
+        display: none;
     }
 }
 
@@ -27,4 +27,31 @@
 .fade {
     opacity: 0;
     transition: 0.3s opacity;
+}
+
+.navMiddle {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.navAround {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#resumeContainer {
+    text-align: center;
+    height: 100vh;
+}
+
+#resumepdf {
+    height: 100%;
+    width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }

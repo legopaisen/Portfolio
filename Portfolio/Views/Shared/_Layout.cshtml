@@ -13,22 +13,39 @@
 </head>
 <body>
     <div>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-            <div class="container">
-                
-                <a class="navbar-brand" href="@Url.Action("Index","Home")" target="_self">
-                    <img src="~/images/signature.png" height="58px" width="200px"/>
-                </a>
-
-                <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item">
-                        <a href="https://github.com/legopaisen" class="nav-link border border-light rounded"
+        <nav id="navbar" class="navbar justify-content-center navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container justify-content-center">
+                <ul class="navbar-nav nav-flex-icons align-items-center">
+                    <li class="nav-item navAround">
+                        <a href="https://www.facebook.com/gelosenpaii/" style="color: black"
+                           target="_blank">
+                            <i class="fa-brands fa-facebook" style="color: black;"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="nav-item navAround">
+                        <a href="https://github.com/legopaisen" style="color: black"
                             target="_blank">
-                            <i class="fab fa-github mr-2"></i> GitHub
+                            <i class="fab fa-github mr-2" style="color: black;"></i> GitHub
+                        </a>
+                    </li>
+                    <li class="nav-item navMiddle">
+                        <a class="navbar-brand" href="@Url.Action("Index","Home")" target="_self">
+                            <img src="~/images/signature.png" height="58px" width="200px"/>
+                        </a>
+                    </li>
+                    <li class="nav-item navAround">
+                        <a href="https://www.linkedin.com/in/angelo-macapinlac-73a352137/"" style="color: black"
+                            target="_blank">
+                            <i class="fa-brands fa-linkedin" style="color: black;"></i> LinkedIn
+                        </a>
+                    </li>
+                    <li class="nav-item navAround">
+                        <a href="@Url.Action("Index","Resume")" " style="color: black"
+                           target="_blank">
+                            <i class="fa-solid fa-file-lines" style="color: black;"></i> Resume
                         </a>
                     </li>
                 </ul>
-
             </div>
         </nav>
         @RenderBody()
@@ -41,6 +58,30 @@
     <script src="~/js/slidein.js"></script>
     <script src="~/simple-parallax-js/simpleParallax.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <script>
+        //$(document).ready(function(){
+        //    $(window).on("scroll", function () {
+        //        var content = document.getElementById("content");
+        //        // Get the offset position of the navbar
+        //        var sticky = content.offsetTop;
+        //        var navbar = document.getElementById("navbar");
+        //        myFunction(content, sticky, navbar);
+
+        //    });
+
+
+        //});
+
+        //function myFunction(content, sticky, navbar) {
+        //    if (window.pageYOffset >= sticky) {
+        //        navbar.classList.add("sticky")
+        //    } 
+        //    else {
+        //        navbar.classList.remove("sticky");
+        //    }
+        //}
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
